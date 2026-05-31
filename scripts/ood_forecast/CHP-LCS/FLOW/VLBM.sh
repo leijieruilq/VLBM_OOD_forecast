@@ -1,0 +1,112 @@
+
+export CUDA_VISIBLE_DEVICES=0
+
+model_name=VLBM
+
+python -u run_vlbm.py \
+  --task_name ood_vlbm \
+  --is_training 1 \
+  --root_path ./raw_files/PEMS_bay/ \
+  --data_path data_merged.npy \
+  --label_path anomaly_labels.npy \
+  --model_id pemsbay_$seq_len'_'12 \
+  --model $model_name \
+  --data vlbm_pems_0 \
+  --features M \
+  --seq_len 96 \
+  --label_len 0 \
+  --pred_len 12 \
+  --hiddens 256 \
+  --num_Period_Block 2 \
+  --m 200 \
+  --interval 5 \
+  --heads 1 \
+  --learning_rate 0.001 \
+  --enc_in 365 \
+  --dec_in 365 \
+  --c_out 365 \
+  --des 'Exp' \
+  --batch_size 16 \
+  --des 'Exp' \
+  --itr 1
+
+python -u run_vlbm.py \
+  --task_name ood_vlbm \
+  --is_training 1 \
+  --root_path ./raw_files/PEMS_bay/ \
+  --data_path data_merged.npy \
+  --label_path anomaly_labels.npy \
+  --model_id pemsbay_$seq_len'_'24 \
+  --model $model_name \
+  --data vlbm_pems_0 \
+  --features M \
+  --seq_len 96 \
+  --label_len 0 \
+  --pred_len 24 \
+  --hiddens 256 \
+  --num_Period_Block 2 \
+  --m 200 \
+  --interval 5 \
+  --heads 1 \
+  --learning_rate 0.001 \
+  --enc_in 365 \
+  --dec_in 365 \
+  --c_out 365 \
+  --des 'Exp' \
+  --batch_size 16 \
+  --des 'Exp' \
+  --itr 1
+
+python -u run_vlbm.py \
+  --task_name ood_vlbm \
+  --is_training 1 \
+  --root_path ./raw_files/PEMS_bay/ \
+  --data_path data_merged.npy \
+  --label_path anomaly_labels.npy \
+  --model_id pemsbay_$seq_len'_'48 \
+  --model $model_name \
+  --data vlbm_pems_0 \
+  --features M \
+  --seq_len 96 \
+  --label_len 0 \
+  --pred_len 48 \
+  --hiddens 256 \
+  --num_Period_Block 2 \
+  --m 200 \
+  --interval 5 \
+  --heads 1 \
+  --learning_rate 0.001 \
+  --enc_in 365 \
+  --dec_in 365 \
+  --c_out 365 \
+  --des 'Exp' \
+  --batch_size 16 \
+  --des 'Exp' \
+  --itr 1
+
+python -u run_vlbm.py \
+  --task_name ood_vlbm \
+  --is_training 1 \
+  --root_path ./raw_files/PEMS_bay/ \
+  --data_path data_merged.npy \
+  --label_path anomaly_labels.npy \
+  --model_id pemsbay_$seq_len'_'96 \
+  --model $model_name \
+  --data vlbm_pems_0 \
+  --features M \
+  --seq_len 96 \
+  --label_len 0 \
+  --pred_len 96 \
+  --hiddens 256 \
+  --num_Period_Block 2 \
+  --m 200 \
+  --interval 5 \
+  --heads 1 \
+  --learning_rate 0.001 \
+  --enc_in 365 \
+  --dec_in 365 \
+  --c_out 365 \
+  --des 'Exp' \
+  --batch_size 16 \
+  --des 'Exp' \
+  --itr 1
