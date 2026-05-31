@@ -21,6 +21,7 @@ and propagates OOD deviations over a latent-induced graph. Experiments on OOD an
    |-- scripts # Running scripts
    |-- dataset # Place the download datsets here
    |-- checkpoints # Place the output or pretrained models here
+   |-- OOD and Synthetic Graph datasets (CHP-LCS.zip/synthetic_graph_pulse_v2.zip)
 ```
 
 ## Reproduction
